@@ -10,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -57,7 +58,8 @@ public class MainApp extends Application {
  * @param person the person object to be edited
  * @return true if the user clicked OK, false otherwise.
  */
-public boolean showPersonEditDialog(Person person) {
+public boolean showPersonEditDialog(Person person) 
+{
     try {
         // Load the fxml file and create a new stage for the popup dialog.
         FXMLLoader loader = new FXMLLoader();
@@ -89,14 +91,18 @@ public boolean showPersonEditDialog(Person person) {
   
     // ... THE REST OF THE CLASS ...
     @Override
-    public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AddressApp");
+public void start(Stage primaryStage) 
+{
+    this.primaryStage = primaryStage;
+    this.primaryStage.setTitle("AddressApp");
 
-        initRootLayout();
+    // Set the application icon.
+    this.primaryStage.getIcons().add(new Image("file:resources/images/283051_moleskine_notes_note_notebook_diary_icon.png"));
 
-        showPersonOverview();
-    }
+    initRootLayout();
+
+    showPersonOverview();
+}
 
     /**
      * Initializes the root layout.
