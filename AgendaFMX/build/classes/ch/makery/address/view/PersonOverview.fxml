@@ -60,9 +60,9 @@
                               <Label fx:id="birthdayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                            </children>
                         </GridPane>
-                        <Button layoutX="252.0" layoutY="259.0" mnemonicParsing="false" text="New" />
-                        <Button layoutX="304.0" layoutY="259.0" mnemonicParsing="false" text="Edit" />
-                        <Button layoutX="352.0" layoutY="259.0" mnemonicParsing="false" text="Delete" />
+                        <Button layoutX="252.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleNewPerson" text="New" />
+                        <Button layoutX="304.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleEditPerson" text="Edit" />
+                        <Button layoutX="352.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Delete" />
                      </children>
                   </AnchorPane>
               </items>
