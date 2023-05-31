@@ -1,11 +1,11 @@
-/*package ch.makery.address.view;
+package ch.makery.address.view;
 
 import java.io.File;
 
 import javafx.fxml.FXML;
 import javafx.stage.FileChooser;
 
-import org.controlsfx.dialog.Dialogs;
+//import org.controlsfx.dialog.Dialogs;
 
 import ch.makery.address.MainApp;
 
@@ -15,7 +15,7 @@ import ch.makery.address.MainApp;
  * elements can be placed.
  * 
  * @author Marco Jakob
- *//*
+ */
 public class RootLayoutController {
 
     // Reference to the main application
@@ -25,14 +25,14 @@ public class RootLayoutController {
      * Is called by the main application to give a reference back to itself.
      * 
      * @param mainApp
-     *//*
+     */
     public void setMainApp(MainApp mainApp) {
         this.mainApp = mainApp;
     }
 
     /**
      * Creates an empty address book.
-     *//*
+     */
     @FXML
     private void handleNew() {
         mainApp.getPersonData().clear();
@@ -41,7 +41,7 @@ public class RootLayoutController {
 
     /**
      * Opens a FileChooser to let the user select an address book to load.
-     *//*
+     */
     @FXML
     private void handleOpen() {
         FileChooser fileChooser = new FileChooser();
@@ -62,7 +62,7 @@ public class RootLayoutController {
     /**
      * Saves the file to the person file that is currently open. If there is no
      * open file, the "save as" dialog is shown.
-     *//*
+     */
     @FXML
     private void handleSave() {
         File personFile = mainApp.getPersonFilePath();
@@ -75,7 +75,7 @@ public class RootLayoutController {
 
     /**
      * Opens a FileChooser to let the user select a file to save to.
-     *//*
+     */
     @FXML
     private void handleSaveAs() {
 		FileChooser fileChooser = new FileChooser();
@@ -99,21 +99,29 @@ public class RootLayoutController {
 
     /**
      * Opens an about dialog.
-     *//*
-    @FXML
-    private void handleAbout() {
-		Dialogs.create()
-	        .title("AddressApp")
-	        .masthead("About")
-	        .message("Author: Marco Jakob\nWebsite: http://code.makery.ch")
-	        .showInformation();
-    }
+     */
+//    @FXML
+//    private void handleAbout() {
+//		Dialogs.create()
+//	        .title("AddressApp")
+//	        .masthead("About")
+//	        .message("Author: Marco Jakob\nWebsite: http://code.makery.ch")
+//	        .showInformation();
+//    }
 
     /**
      * Closes the application.
-     *//*
+     */
     @FXML
     private void handleExit() {
         System.exit(0);
     }
-}*/
+
+   /**
+    * Opens the birthday statistics.
+    */
+   @FXML
+   private void handleShowBirthdayStatistics() {
+     mainApp.showBirthdayStatistics();
+   }
+}
